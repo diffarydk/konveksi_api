@@ -81,7 +81,6 @@ class TokenRefreshView(APIView):
             refresh = RefreshToken(refresh_token)
             access_token = str(refresh.access_token)
 
-            # Opsional: Rotasi refresh token
             if getattr(settings, "SIMPLE_JWT", {}).get("ROTATE_REFRESH_TOKENS", False):
                 refresh = RefreshToken.for_user(request.user)
                 response = Response({"access": access_token})

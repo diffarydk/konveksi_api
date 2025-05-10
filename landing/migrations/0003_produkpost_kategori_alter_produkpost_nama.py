@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("api", "0002_remove_produkpost_stok_alter_produkpost_deskripsi"),
+        ("landing", "0002_remove_produkpost_stok_alter_produkpost_deskripsi"),
     ]
 
     operations = [
